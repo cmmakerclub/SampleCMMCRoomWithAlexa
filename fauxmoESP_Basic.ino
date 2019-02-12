@@ -148,24 +148,34 @@ void setup() {
 
         if (strcmp(device_name, ID_PLUG_01)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-001/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-001/$/command", state ? "ON" : "OFF", false);
         } else if (strcmp(device_name, ID_PLUG_02)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-002/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-002/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_03)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-003/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-003/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_04)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-004/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-004/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_05)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-005/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-005/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_06)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-006/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-006/$/command", state ? "ON" : "OFF", false);        
         } else if (strcmp(device_name, ID_PLUG_07)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-007/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-007/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_08)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-008/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-008/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_09)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-009/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-009/$/command", state ? "ON" : "OFF", false);          
         } else if (strcmp(device_name, ID_PLUG_10)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-010/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-010/$/command", state ? "ON" : "OFF", false);
         } else if (strcmp(device_name, ID_PLUG_ALL)==0 || strcmp(device_name, ID_LIGHT_ALL)==0) {
           mqtt->sync_advpub("", "CMMC/PLUG-001/$/command", state ? "ON" : "OFF", false);
           mqtt->sync_advpub("", "CMMC/PLUG-002/$/command", state ? "ON" : "OFF", false);
@@ -177,6 +187,18 @@ void setup() {
           mqtt->sync_advpub("", "CMMC/PLUG-008/$/command", state ? "ON" : "OFF", false);
           mqtt->sync_advpub("", "CMMC/PLUG-009/$/command", state ? "ON" : "OFF", false);
           mqtt->sync_advpub("", "CMMC/PLUG-010/$/command", state ? "ON" : "OFF", false);
+
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-001/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-002/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-003/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-004/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-005/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-006/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-007/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-008/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-009/$/command", state ? "ON" : "OFF", false);
+          mqtt->sync_advpub("", "WORKSHOP/PLUG-010/$/command", state ? "ON" : "OFF", false);
+
         } 
 //        else if (strcmp(device_name, ID_GREEN)==0) {
 //            digitalWrite(LED_GREEN, state ? HIGH : LOW);
